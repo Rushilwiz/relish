@@ -1,4 +1,36 @@
 {% extends 'form/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+{{ form.media }}
+
+<style>
+
+body {
+    margin-top: 1rem;
+    background-color: #ebe5f5;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.asteriskField {
+    display: none;
+}
+
+</style>
+
+{% endblock %}
+
 {% block content %}
-<h1>index.</h1>
+<div class="container w-25">
+{% if success %}
+<h1>Response submitted. Thank you for your help!</h1>
+{% else %}
+<h1>Form</h1>
+<i>all fields are optional</i>
+{% crispy form %}
+{% endif %}
+</div>
 {% endblock %}
