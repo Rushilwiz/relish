@@ -8,6 +8,7 @@ Django = "*"
 python-dotenv = "*"
 django-address = "*"
 django-crispy-forms = "*"
+gunicorn = "*"
 
 [dev-packages]
 
