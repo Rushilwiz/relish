@@ -20,6 +20,16 @@ body {
 }
 
 </style>
+{% if success %}
+<script type="text/javascript">   
+    function redirect() 
+    {  
+	window.location="http://www.google.com"; 
+    } 
+    setTimeout('redirect()', 5000);
+</script>
+{% endif %}
+
 
 {% endblock %}
 
